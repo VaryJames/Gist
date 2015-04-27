@@ -1,4 +1,10 @@
+﻿
+(1)jbyteArray to char*
 
-(1)jbyteArray ת char*
+	char* inDataCp = (char*)(*env)->GetByteArrayElements((env, inData, 0);
 
-char* inDataCp = (char*)(*env)->GetByteArrayElements(inData, 0);
+
+(2)char* to jbyteArray
+
+	jbyteArray     outByteArray = (*env)-> NewByteArray(env, 8);
+	(*env)->SetByteArrayRegion(env, outByteArray, 0, 8(jbyte*)outChars);
