@@ -1,0 +1,4 @@
+
+(1)jbyteArray ת char*
+
+char* inDataCp = (char*)(*env)->GetByteArrayElements(inData, 0);
