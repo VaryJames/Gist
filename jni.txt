@@ -8,3 +8,18 @@
 
 	jbyteArray     outByteArray = (*env)-> NewByteArray(env, 8);
 	(*env)->SetByteArrayRegion(env, outByteArray, 0, 8(jbyte*)outChars);
+
+(3)创建char 数组
+	
+	char outChars[8] ;
+	outChars = (char *)malloc(8*sizeof(char));
+
+(4)native注册
+	
+	byte[] encrypt(byte[] a,byte[] b);
+	
+	{"encrypt","([B[B)[B",(jbyte *) encrypt}
+
+(5)生成头文件
+\src\main\java
+javah -d jni com.liuhong.app.NativeUtil
